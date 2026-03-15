@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { imgSrc } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "About — Sara Preston",
@@ -13,14 +14,14 @@ export default function AboutPage() {
         className="text-xl leading-relaxed max-w-md mb-12"
         style={{ fontFamily: "'Georgia', serif", fontStyle: "italic" }}
       >
-        I&rsquo;m Sara, an <em className="not-italic font-medium" style={{ fontStyle: "italic" }}>Art Director + Designer</em> based in San
+        I&rsquo;m Sara, an <em className="font-medium">Art Director + Designer</em> based in San
         Francisco, CA.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="relative aspect-[3/4] overflow-hidden">
           <Image
-            src="/images/about/sara-preston.jpeg"
+            src={imgSrc("/images/about/sara-preston.jpeg")}
             alt="Sara Preston"
             fill
             className="object-cover"

@@ -19,7 +19,7 @@ export interface Project {
 export interface ContentSection {
   heading?: string;
   text?: string;
-  columns?: number; // 1, 2, or 4 — how many images per row
+  columns?: number; // 1, 2, 3, or 4 — how many images per row
   images: string[];
   videoPlaceholder?: string; // description of video to be added later
 }
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     thumbnail: "/images/colorsolve/cs_mixedcollectionofshampoos_tiledbathset.jpg",
     heroImage: "/images/colorsolve/cs_dailymoistureshampooandconditioner_purpletile.jpg",
     images: [
-      "/images/colorsolve/cs_dailymoistureshampooandconditioner_tiledBathnook.jpg",
+      "/images/colorsolve/cs_dailymoistureshampooandconditioner_tiledbathnook.jpg",
       "/images/colorsolve/cs_mixedcollectionofshampoosconditionersandcolorshots_styled_hero_1120.jpg",
       "/images/colorsolve/bond-building---benefits---icons.jpg",
       "/images/colorsolve/daily-moisture---benefits---icons.jpg",
@@ -130,7 +130,7 @@ export const projects: Project[] = [
           "/images/colorsolve/cs_frizzaway_shampooconditionerplusbrunettecolorshot_pouring_step2.jpg",
           "/images/colorsolve/cs_bondbuildingshampooconditioner_v1towel.jpg",
           "/images/colorsolve/cs_mixedcollectionofshampoos_tiledbathset.jpg",
-          "/images/colorsolve/cs_dailymoistureshampooandconditioner_tiledBathnook.jpg",
+          "/images/colorsolve/cs_dailymoistureshampooandconditioner_tiledbathnook.jpg",
         ],
       },
     ],

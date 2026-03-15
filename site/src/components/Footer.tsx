@@ -8,7 +8,7 @@ export default function Footer() {
 
       {/* Footer content */}
       <div className="max-w-[1800px] mx-auto px-12 py-12">
-        <div className="flex items-start justify-between">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-6">
           <div>
             <h2 className="text-2xl font-light tracking-[0.15em] uppercase mb-6">
               SARA PRESTON
@@ -25,7 +25,7 @@ export default function Footer() {
                 <circle cx="4" cy="4" r="2" />
               </svg>
             </a>
-            <a href="http://instagram.com/_sarapreston" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:opacity-60 transition-opacity">
+            <a href="https://www.instagram.com/_sarapreston" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:opacity-60 transition-opacity">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                 <circle cx="12" cy="12" r="5" />

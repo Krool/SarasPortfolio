@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { imgSrc } from "@/lib/basePath";
 
 interface ProjectCardProps {
   title: string;
@@ -12,7 +13,7 @@ export default function ProjectCard({ title, slug, thumbnail }: ProjectCardProps
     <Link href={`/home/${slug}`} className="block project-card group">
       <div className="relative aspect-[3/2] overflow-hidden bg-[var(--color-surface)]">
         <Image
-          src={thumbnail}
+          src={imgSrc(thumbnail)}
           alt={title}
           fill
           className="object-cover"

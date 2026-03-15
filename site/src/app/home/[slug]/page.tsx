@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects, ContentSection } from "@/data/projects";
+import { imgSrc } from "@/lib/basePath";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -38,7 +39,7 @@ function SectionImages({ section }: { section: ContentSection }) {
       {section.images.map((src, i) => (
         <div key={src + i}>
           <Image
-            src={src}
+            src={imgSrc(src)}
             alt={`${section.heading || "Project"} — image ${i + 1}`}
             width={1400}
             height={900}
@@ -87,7 +88,7 @@ export default async function ProjectPage({
       {/* Hero image - full bleed */}
       <div className="relative w-full h-[70vh] min-h-[500px] overflow-hidden bg-surface">
         <Image
-          src={project.heroImage || project.thumbnail}
+          src={imgSrc(project.heroImage || project.thumbnail)}
           alt={project.title}
           fill
           className="object-cover"
@@ -214,7 +215,7 @@ export default async function ProjectPage({
           {project.images.map((src, i) => (
             <div key={src}>
               <Image
-                src={src}
+                src={imgSrc(src)}
                 alt={`${project.title} — image ${i + 1}`}
                 width={1400}
                 height={900}
