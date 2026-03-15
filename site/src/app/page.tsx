@@ -1,28 +1,11 @@
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
-import Marquee from "@/components/Marquee";
 
 export default function Home() {
   return (
-    <>
-      {/* Current Location */}
-      <section className="max-w-[1800px] mx-auto px-8 pt-28 pb-4">
-        <p className="text-xs tracking-widest uppercase text-muted">Current Location</p>
-        <h3 className="text-base font-medium mt-1">San Francisco, CA</h3>
-      </section>
-
-      {/* Marquee */}
-      <Marquee />
-
-      {/* Tagline */}
-      <section className="max-w-[1800px] mx-auto px-8 py-8">
-        <p className="text-base text-foreground max-w-xl">
-          Crafting brands and campaigns that connect culture, creativity, and commerce.
-        </p>
-      </section>
-
-      {/* Portfolio Grid - 2 columns, 3:2 aspect, 30px gap */}
-      <section className="max-w-[1800px] mx-auto px-8 pb-20">
+    <div className="pt-20">
+      {/* Portfolio Grid */}
+      <section className="max-w-[1800px] mx-auto px-12 pt-12 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
           {projects.map((project) => (
             <ProjectCard
@@ -34,6 +17,26 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </>
+
+      {/* Current Location + Map */}
+      <section className="max-w-[1100px] mx-auto px-12 pb-24">
+        <h2 className="text-4xl md:text-5xl font-light text-center mb-12">
+          San Francisco, CA
+        </h2>
+        <div className="w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.2!2d-122.42927!3d37.75964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e1c3af4ea55%3A0x55f5b2e88f6fa425!2sMission%20Dolores%20Park!5e0!3m2!1sen!2sus!4v1"
+            className="grayscale"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="San Francisco, CA - Dolores Park"
+          />
+        </div>
+      </section>
+    </div>
   );
 }
